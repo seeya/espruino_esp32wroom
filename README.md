@@ -40,3 +40,19 @@ https://techtutorialsx.com/2017/10/15/esp32-javascript-getting-started-with-espr
 https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver
 https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo/related
 https://www.espruino.com/ESP32
+https://www.youtube.com/watch?v=IStuUv9eAmE
+
+
+# ESP-8266 
+It goes the same for esp8266.
+
+```
+esptool.py --port /dev/tty.SLAB_USBtoUART --baud 115200 erase_flash
+```
+
+```
+esptool.py --port /dev/tty.SLAB_USBtoUART --baud 460800 write_flash \
+  --flash_freq 80m --flash_mode qio --flash_size 4MB-c1 \
+  0x0000 "boot_v1.6.bin" 0x1000 espruino_esp8266_user1.bin \
+  0x3FC000  esp_init_data_default.bin 0x3FE000 blank.bin
+```
