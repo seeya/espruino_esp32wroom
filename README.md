@@ -33,3 +33,10 @@ https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjack
 
 # Setting correct baudrate
 In the Web IDE, click on settings (top right cog icon). Go to `connection` and update the baudrate to `115200`.
+
+
+# References
+https://techtutorialsx.com/2017/10/15/esp32-javascript-getting-started-with-espruino/
+https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver
+https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo/related
+https://www.espruino.com/ESP32
