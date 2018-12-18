@@ -43,15 +43,23 @@ https://www.espruino.com/ESP32
 https://www.youtube.com/watch?v=IStuUv9eAmE
 
 
-# ESP-8266 
+# ESP8266 NodeMCU
 It goes the same for esp8266.
 
 ```
 esptool.py --port /dev/tty.SLAB_USBtoUART --baud 115200 erase_flash
+
+esptool.py --port /dev/tty.SLAB_USBtoUART --baud 460800 write_flash \
+  --flash_freq 80m --flash_mode qio --flash_size 4MB-c1 \
+  0x0000 "boot_v1.6.bin" 0x1000 espruino_esp8266_user1.bin \
+  0x3FC000  esp_init_data_default.bin 0x3FE000 blank.bin
 ```
 
+# ESP8266 WeMOS
+
 ```
-esptool.py --port /dev/tty.SLAB_USBtoUART --baud 460800 write_flash \
+esptool.py --port /dev/tty.wchusbserial1420 --baud 115200 erase_flash
+  esptool.py --port /dev/tty.wchusbserial1420 --baud 460800 write_flash \
   --flash_freq 80m --flash_mode qio --flash_size 4MB-c1 \
   0x0000 "boot_v1.6.bin" 0x1000 espruino_esp8266_user1.bin \
   0x3FC000  esp_init_data_default.bin 0x3FE000 blank.bin
